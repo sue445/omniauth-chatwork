@@ -1,6 +1,6 @@
 require "omniauth/chatwork/version"
 
-module Omniauth
+module OmniAuth
   module Chatwork
     # Your code goes here...
   end

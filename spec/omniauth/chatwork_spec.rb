@@ -1,6 +1,6 @@
-RSpec.describe Omniauth::Chatwork do
+RSpec.describe OmniAuth::Chatwork do
   it "has a version number" do
-    expect(Omniauth::Chatwork::VERSION).not_to be nil
+    expect(OmniAuth::Chatwork::VERSION).not_to be nil
   end
 
   it "does something useful" do

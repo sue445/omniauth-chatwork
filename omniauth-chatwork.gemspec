@@ -5,7 +5,7 @@ require "omniauth/chatwork/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-chatwork"
-  spec.version       = Omniauth::Chatwork::VERSION
+  spec.version       = OmniAuth::Chatwork::VERSION
   spec.authors       = ["sue445"]
   spec.email         = ["sue445@sue445.net"]
 
