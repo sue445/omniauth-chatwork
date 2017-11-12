@@ -4,6 +4,7 @@ require "omniauth/builder"
 require "dotenv"
 require "pry"
 require "faraday_curl"
+require "pp"
 
 require "omniauth-chatwork"
 
@@ -44,6 +45,7 @@ end
 
 get "/auth/:name/callback" do
   auth = request.env["omniauth.auth"]
+  pp auth
   auth.to_json
 end
 

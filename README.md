@@ -21,8 +21,67 @@ Or install it yourself as:
     $ gem install omniauth-chatwork
 
 ## Usage
+```ruby
+use OmniAuth::Builder do
+  provider :chatwork, ENV["CLIENT_ID"], ENV["CLIENT_SECRET"]
+  # or
+  provider :chatwork, ENV["CLIENT_ID"], ENV["CLIENT_SECRET"], scope: ["users.all:read", "rooms.all:read_write", "contacts.all:read_write"]
+end
+```
 
-TODO: Write usage instructions here
+## Configuring
+* `scope` : `String` or `Array`
+  * A list of permissions you want to request from the user
+  * default is `["rooms.all:read_write"]`
+  * see Appendix scope list of http://download.chatwork.com/ChatWork_API_Documentation.pdf (en) or http://developer.chatwork.com/ja/oauth.html#secAppendix (ja)
+
+## Auth Hash
+An example auth hash available in `request.env['omniauth.auth']`:
+
+```ruby
+{
+  provider: "chatwork",
+  uid: 1111111,
+  info: {
+    name: "sue445",
+    email: "sue445@example.com",
+    description: "I am cure engineer!",
+    image: "https://appdata.chatwork.com/avatar/ico_default_blue.png",
+    urls: {
+      profile: "http://github.com/sue445"
+    }
+  },
+  credentials: {
+    token: "XXXXXXXXXXXXXXXXXXX",
+    refresh_token: "XXXXXXXXXXXXXXXXXXX",
+    expires_at: 1510504991,
+    expires: true
+  },
+  extra: {
+    raw_info: {
+      account_id: 1111111,
+      room_id: 1111111,
+      name: "sue445",
+      chatwork_id: "",
+      organization_id: 1111111,
+      organization_name: "",
+      department: "",
+      title: "",
+      url: "http://github.com/sue445",
+      introduction: "I am cure engineer!",
+      mail: "",
+      tel_organization: "",
+      tel_extension: "",
+      tel_mobile: "",
+      skype: "",
+      facebook: "",
+      twitter: "",
+      avatar_image_url: "https://appdata.chatwork.com/avatar/ico_default_blue.png",
+      login_mail: "sue445@example.com"
+    }
+  }
+}
+```
 
 ## Development
 
@@ -42,7 +101,7 @@ open https://127.0.0.1:4567/
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/omniauth-chatwork.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sue445/omniauth-chatwork.
 
 ## License
 
