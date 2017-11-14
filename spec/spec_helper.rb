@@ -1,5 +1,17 @@
 require "bundler/setup"
+require "rack/test"
+require "webmock/rspec"
+require "rspec/its"
+
 require "omniauth/chatwork"
+
+OmniAuth.config.logger = Logger.new("/dev/null")
+
+Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
+
+def spec_dir
+  Pathname(__dir__)
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -11,4 +23,10 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.include Rack::Test::Methods
+  config.include FixtureUtil
+  config.include OmniAuth::Test::StrategyTestCase, type: :strategy
+
+  config.extend OmniAuth::Test::StrategyMacros, type: :strategy
 end
