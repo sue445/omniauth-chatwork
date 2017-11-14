@@ -2,6 +2,8 @@
 
 OmniAuth strategy for ChatWork
 
+[![Build Status](https://travis-ci.org/sue445/omniauth-chatwork.svg?branch=master)](https://travis-ci.org/sue445/omniauth-chatwork)
+
 ## Installation
 
 Add this line to your application's Gemfile:
