@@ -33,6 +33,10 @@ use OmniAuth::Builder do
 end
 ```
 
+And register `https://YOURSERVER/auth/chatwork/callback` to *Redirect URI*
+
+![redirect_uri](img/redirect_uri.png)
+
 ## Configuring
 * `scope` : `String` or `Array`
   * A list of permissions you want to request from the user
@@ -94,6 +98,10 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ### Run dummy app
+At first, register `https://127.0.0.1:4567/auth/chatwork/callback` to *Redirect URI*
+
+![redirect_uri](img/redirect_uri.png)
+
 ```bash
 cp .env.example .env
 vi .env
