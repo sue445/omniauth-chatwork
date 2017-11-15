@@ -2,6 +2,7 @@
 
 OmniAuth strategy for ChatWork
 
+[![Gem Version](https://badge.fury.io/rb/omniauth-chatwork.svg)](https://badge.fury.io/rb/omniauth-chatwork)
 [![Build Status](https://travis-ci.org/sue445/omniauth-chatwork.svg?branch=master)](https://travis-ci.org/sue445/omniauth-chatwork)
 
 ## Installation
