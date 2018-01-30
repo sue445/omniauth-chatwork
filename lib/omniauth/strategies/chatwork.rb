@@ -4,7 +4,7 @@ require "faraday"
 module OmniAuth
   module Strategies
     class Chatwork < ::OmniAuth::Strategies::OAuth2
-      DEFAULT_SCOPE = "rooms.all:read_write"
+      DEFAULT_SCOPE = "rooms.all:read_write users.profile.me:read"
 
       option :client_options, {
         site:          "https://api.chatwork.com/v2",
