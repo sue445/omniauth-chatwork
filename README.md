@@ -40,7 +40,7 @@ And register `https://YOURSERVER/auth/chatwork/callback` to *Redirect URI*
 ## Configuring
 * `scope` : `String` or `Array`
   * A list of permissions you want to request from the user
-  * default is `["rooms.all:read_write"]`
+  * default is `["rooms.all:read_write", "users.profile.me:read"]`
   * see Appendix scope list of http://download.chatwork.com/ChatWork_API_Documentation.pdf (en) or http://developer.chatwork.com/ja/oauth.html#secAppendix (ja)
 
 ## Auth Hash
