@@ -6,7 +6,6 @@ OmniAuth strategy for ChatWork
 [![Build Status](https://travis-ci.org/sue445/omniauth-chatwork.svg?branch=master)](https://travis-ci.org/sue445/omniauth-chatwork)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c28dcf54cef09425c10d/maintainability)](https://codeclimate.com/github/sue445/omniauth-chatwork/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/omniauth-chatwork/badge.svg)](https://coveralls.io/github/sue445/omniauth-chatwork)
-[![Dependency Status](https://gemnasium.com/badges/github.com/sue445/omniauth-chatwork.svg)](https://gemnasium.com/github.com/sue445/omniauth-chatwork)
 
 ## Installation
 
