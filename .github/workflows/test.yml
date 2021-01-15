@@ -12,14 +12,14 @@ on:
   schedule:
     - cron: "0 10 * * 5" # JST 19:00 (Fri)
 
-env:
-  CI: "true"
-
 jobs:
   test:
     runs-on: ubuntu-latest
 
     container: ${{ matrix.ruby }}
+
+    env:
+      BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}.gemfile
 
     strategy:
       fail-fast: false
@@ -34,6 +34,8 @@ jobs:
           - ruby:2.7
           - ruby:3.0
           - rubylang/ruby:master-nightly-bionic
+        gemfile:
+          - omniauth_1
         include:
           - ruby: rubylang/ruby:master-nightly-bionic
             allow_failures: "true"
@@ -41,15 +43,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-
       - name: Cache vendor/bundle
         uses: actions/cache@v1
         id: cache_gem
         with:
           path: vendor/bundle
-          key: v1-gem-${{ runner.os }}-${{ matrix.ruby }}-${{ github.sha }}
+          key: v1-gem-${{ runner.os }}-${{ matrix.ruby }}-${{ matrix.gemfile }}-${{ github.sha }}
           restore-keys: |
-            v1-gem-${{ runner.os }}-${{ matrix.ruby }}-
+            v1-gem-${{ runner.os }}-${{ matrix.ruby }}-${{ matrix.gemfile }}-
         continue-on-error: ${{ matrix.allow_failures == 'true' }}
 
       - name: bundle update
