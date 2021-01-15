@@ -18,6 +18,7 @@ require "rspec/its"
 require "omniauth/chatwork"
 
 OmniAuth.config.logger = Logger.new("/dev/null")
+OmniAuth.config.allowed_request_methods = %i[get post]
 
 Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
 
