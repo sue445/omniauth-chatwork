@@ -21,6 +21,9 @@ jobs:
 
     container: ${{ matrix.ruby }}
 
+    env:
+      BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}.gemfile
+
     strategy:
       fail-fast: false
 
@@ -34,6 +37,8 @@ jobs:
           - ruby:2.7
           - ruby:3.0
           - rubylang/ruby:master-nightly-bionic
+        gemfile:
+          - omniauth_1
         include:
           - ruby: rubylang/ruby:master-nightly-bionic
             allow_failures: "true"
@@ -47,9 +52,9 @@ jobs:
         id: cache_gem
         with:
           path: vendor/bundle
-          key: v1-gem-${{ runner.os }}-${{ matrix.ruby }}-${{ github.sha }}
+          key: v1-gem-${{ runner.os }}-${{ matrix.ruby }}-${{ matrix.gemfile }}-${{ github.sha }}
           restore-keys: |
-            v1-gem-${{ runner.os }}-${{ matrix.ruby }}-
+            v1-gem-${{ runner.os }}-${{ matrix.ruby }}-${{ matrix.gemfile }}-
         continue-on-error: ${{ matrix.allow_failures == 'true' }}
 
       - name: bundle update
