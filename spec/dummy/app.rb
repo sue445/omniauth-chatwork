@@ -38,8 +38,12 @@ use OmniAuth::Builder do
 end
 
 get "/" do
+  # c.f. https://github.com/BobbyMcWho/omniauth_2_examples/blob/0e97264994313e4000c5f2ca5cc4df082355663c/sinatra_app.ru#L18-L21
   <<-HTML
-    <a href="/auth/chatwork">Sign in with ChatWork</a>
+    <form action="/auth/chatwork" method="post">
+      <input type="hidden" name="authenticity_token" value='#{request.env["rack.session"]["csrf"]}'>
+      <button type="submit">Sign in with ChatWork</button>
+    </form>
   HTML
 end
 
