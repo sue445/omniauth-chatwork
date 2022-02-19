@@ -37,7 +37,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "dotenv"
   spec.add_development_dependency "faraday_curl"
-  spec.add_development_dependency "oauth2", ">= 1.3.0"
+
+  # FIXME: doesn't work with oauth2 v1.4.8+
+  # c.f. https://github.com/sue445/omniauth-chatwork/issues/31
+  spec.add_development_dependency "oauth2", ">= 1.3.0", "< 1.4.8"
+
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rack-test"
   spec.add_development_dependency "rake", ">= 10.0"
