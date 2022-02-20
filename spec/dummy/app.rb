@@ -2,7 +2,6 @@ require "sinatra"
 require "webrick/https"
 require "omniauth/builder"
 require "dotenv"
-require "pry"
 require "faraday_curl"
 require "pp"
 
