@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.2...master)
+[full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.3...master)
+
+## v0.1.3
+[full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.2...v0.1.3)
+
+* Avoid oauth2 v1.4.8
+  * https://github.com/sue445/omniauth-chatwork/pull/35
 
 ## v0.1.2
 [full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.1...v0.1.2)
