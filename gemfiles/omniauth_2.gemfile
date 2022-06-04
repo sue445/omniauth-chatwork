@@ -6,3 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gemspec path: "../"
 
 gem "omniauth", "~> 2.0"
+
+eval_gemfile "#{__dir__}/common.gemfile"
