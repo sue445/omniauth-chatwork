@@ -3,7 +3,7 @@
 OmniAuth strategy for ChatWork
 
 [![Gem Version](https://badge.fury.io/rb/omniauth-chatwork.svg)](https://badge.fury.io/rb/omniauth-chatwork)
-[![Build Status](https://github.com/sue445/omniauth-chatwork/workflows/test/badge.svg?branch=master)](https://github.com/sue445/omniauth-chatwork/actions?query=workflow%3Atest)
+[![test](https://github.com/sue445/omniauth-chatwork/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/omniauth-chatwork/actions/workflows/test.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c28dcf54cef09425c10d/maintainability)](https://codeclimate.com/github/sue445/omniauth-chatwork/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/omniauth-chatwork/badge.svg)](https://coveralls.io/github/sue445/omniauth-chatwork)
 
