@@ -47,7 +47,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-          cache-version: ${{ matrix.gemfile }}
 
       - run: bundle update --all --jobs $(nproc) --retry 3
 
