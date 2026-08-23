@@ -1,5 +1,11 @@
 ## Unreleased
-[full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.4...master)
+[full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.5...master)
+
+## [v0.1.5](https://github.com/sue445/omniauth-chatwork/releases/tag/v0.1.5)
+[full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.4...v0.1.5)
+
+* Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/sue445/omniauth-chatwork/pull/114
 
 ## [v0.1.4](https://github.com/sue445/omniauth-chatwork/releases/tag/v0.1.4)
 [full changelog](https://github.com/sue445/omniauth-chatwork/compare/v0.1.3...v0.1.4)
